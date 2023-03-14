@@ -35,7 +35,7 @@
           <label class="control-label" for="content">Content:</label>
           <!-- Input box to enter the
               required data -->
-          <input type="url" maxlength="80" class="form-control" id="content" placeholder="Enter content (i.e: www.github.com)" />
+          <input type="url" maxlength="80" class="form-control" id="content" placeholder="Enter content (i.e: https://github.com)" />
         </div>
         <div class="form-group">
           <!-- Button to generate QR Code for
@@ -60,7 +60,7 @@
     async function createQR(paginaweb){
       const img = document.getElementById('qr-code');
       const apiUrl = 'https://api.qrserver.com/v1/create-qr-code/';
-      const queryParams = '?size=160x160&data=https://' + paginaweb;
+      const queryParams = '?size=160x160&data=' + paginaweb;
       const requestUrl = apiUrl + queryParams;
           
       await fetch(requestUrl, {
